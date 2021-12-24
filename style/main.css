@@ -59,6 +59,9 @@ a{
 .shadow{
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
+.shadow-sm{
+    box-shadow: 0 2px 15px 1px rgb(64 60 67);
+}
 
 .fz-20{
     font-size: 20px;
@@ -125,12 +128,38 @@ a{
 .w-60{
     width: 60%;
 }
+.w-65{
+    width: 65%;
+}
 .w-40{
     width: 40%;
 }
 
 .h-25{
     height: 50%;
+}
+
+.h-100{
+    height: 100%;
+}
+.h-110{
+    height: 110%;
+}
+
+.h-75{
+    height: 75%;
+}
+
+.h-50{
+    height: 75%;
+}
+
+.my-1{
+    margin: 10px 0;
+}
+
+.my-2{
+    margin: 20px 0;
 }
 
 .mx-1{
@@ -140,11 +169,26 @@ a{
 .mx-2{
     margin: 0 20px;
 }
+.mx-0{
+    margin-left: 0;
+    margin-right: 0;
+}
+.my-0{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.px-0{
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .me-5px{
     margin-right: .5rem;
 }
-
+.me-0{
+    margin-right: 0;
+}
 .me-1{
     margin-right: 1rem;
 }
@@ -190,6 +234,11 @@ a{
 .pt-1{
     padding-top: 1rem;
 }
+
+.pt-3{
+    padding-top: 3rem;
+}
+
 .ps-1{
     padding-left: 1rem;
 }
@@ -239,8 +288,16 @@ a{
     color: #4285f4
 }
 
+.text-orange{
+    color:#F68D25;
+}
+
 .text-red{
     color: #EA4335;
+}
+
+.text-bold-red{
+    color:red;
 }
 
 .text-yellow{
@@ -310,10 +367,36 @@ a{
     position: absolute;
 }
 
+.top-left{
+    top: 0;
+    left: 0;
+}
+
 .foot{
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.brightness-50{
+    filter: brightness(50%);
+}
+.z-index-10{
+    z-index: 10;
+}
+
+.z-index-20{
+    z-index: 20;
+}
+.z-index-30{
+    z-index: 30;
+}
+.z-index-40{
+    z-index: 40;
+}
+
+.z-index-50{
+    z-index: 50;
 }
 
 nav .link a{
@@ -364,7 +447,6 @@ main{
     height:34px;
     border: none !important;
     outline: none !important;
-    align-self: center;
 }
 
 button{
@@ -384,11 +466,31 @@ main button:hover{
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
 
+#nav-drawer{
+    animation: transition-ease .4s;
+}
 
+/*#closer-drawer{
+    animation: transition-easeBack .4s;
+}*/
+ 
+@keyframes transition-ease {
+    from{width:0;}
+    to{width:65%;}
+}
+
+/*@keyframes transition-easeBack {
+    from{
+        width:65%;
+    }
+    to{
+        width:0%;
+    }
+}*/
 
 @media screen and (max-width:1200px){
     .ms-12{
-        margin-left: 2em;
+        margin-left: 1rem;
     }
 }
 
@@ -401,6 +503,7 @@ main button:hover{
 @media screen and (max-width:576px){
     h1{
         line-height:1;
+        
     }
 
     .bg-white{
